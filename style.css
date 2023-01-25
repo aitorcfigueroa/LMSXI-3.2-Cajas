@@ -90,11 +90,15 @@ article:nth-child(3)>div>p {
 /* Elementos columna central */
 #tablero {
     height: 100%;
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     padding: 2vh;
+}
+#tablero>div>img {
+    opacity: 1;
+    width: 70%;
+    padding: 5px;
 }
 
 #topLeft {
