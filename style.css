@@ -14,7 +14,8 @@ body {
     flex-direction: column;
     height: 100vh;
 }
- 
+
+/* Encabezado */
 header {
     background-color: rgb(206, 226, 206);
     text-align: center;
@@ -22,6 +23,7 @@ header {
     padding: 1em;
 }
 
+/* Secciones generales */
 section {
     display: flex;
     flex-direction: row;
@@ -29,7 +31,14 @@ section {
     height: 100%;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
 article {
+    position: relative;
     flex: 1;
     background-color: rgb(206, 226, 206);
     text-align: center;
@@ -37,10 +46,22 @@ article {
     flex-direction: column;
     align-items: center;
     margin: 1vw;
-    padding: 1em;
 }
 
-article>h1 {
+/* Backgrounds */
+img + div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    margin: 1em;
+}
+
+/* Encabezados laterales */
+article>div>h1 {
     border-top: 1px solid brown;
     padding: 2px 0 40px 0;
     font-size: xx-large;
@@ -48,28 +69,32 @@ article>h1 {
     width: 100%;
 }
 
-article:nth-child(2)>h1 {
+/* Encabezado Juego */
+article:nth-child(2)>div>h1 {
     padding: 20px 0;
 }
 
-article>p {
+/* Textos laterales */
+article>div>p {
     text-align: justify;
     line-height: 1.4rem;
     padding: 5%;
     border-top: 2px solid brown;
 }
 
-article:nth-child(3)>p {
+/* Texto tercera columna */
+article:nth-child(3)>div>p {
     text-align: center;
 }
- 
+
+/* Elementos columna central */
 #tablero {
     height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin-bottom: 5vh;
+    padding: 2vh;
 }
 
 #topLeft {
@@ -137,7 +162,7 @@ tr + tr {
     border-top: 1px solid white;
 }
 
-article>div:nth-of-type(3) {
+article>div>div:nth-of-type(3) {
     font-family: Arial, Helvetica, sans-serif;
     margin: 4vh 0;
 }
